@@ -25,11 +25,11 @@ class RecetasManager {
     }
 
     fun getRecetas() : List<Receta> {
-        val recipes = arrayListOf<Receta>()
+        /*val recipes = arrayListOf<Receta>()
         recipes.add(Receta(1,"Test 1","Test 1"))
         recipes.add(Receta(2,"Test 2","Test 2"))
-        return recipes
-        //return mRecetas
+        return recipes*/
+        return mRecetas
     }
 
     fun addReceta(receta : Receta) {

@@ -2,6 +2,7 @@ package com.example.cookiemaker
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.cookiemaker.fragments.CreateRecipeFragment
 import com.example.cookiemaker.fragments.IngredientFragment
@@ -17,6 +18,9 @@ class MainActivity : AppCompatActivity() , RecipesFragment.OnMenuClicked, Create
         fragments.add(RecipesFragment())
         fragments.add(CreateRecipeFragment())
         fragments.add(IngredientFragment())
+
+        val username = intent.getBundleExtra("data")?.getString("username")
+        findViewById<TextView>(R.id.txtUser).text = username
 
         val ft = supportFragmentManager.beginTransaction()
         ft.add(R.id.flaContent,fragments[0])
