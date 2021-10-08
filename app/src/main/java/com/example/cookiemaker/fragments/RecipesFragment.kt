@@ -10,12 +10,13 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
+import com.example.cookiemaker.MainActivity
 import com.example.cookiemaker.R
 import com.example.cookiemaker.adapter.RecipeListAdapter
 import pe.edu.ulima.pm.ulgamestore.model.RecetasManager
 
 class RecipesFragment: Fragment() {
-
+    lateinit var ACTIVITY : MainActivity
     interface OnMenuClicked{
         fun OnClick(menuName: String)
     }
@@ -32,6 +33,7 @@ class RecipesFragment: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        ACTIVITY = context as MainActivity
         return inflater.inflate(R.layout.fragment_recipes,container,false)
     }
 
@@ -39,7 +41,7 @@ class RecipesFragment: Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val rviRecipes = view.findViewById<RecyclerView>(R.id.rviRecipes)
-        rviRecipes.adapter = RecipeListAdapter(RecetasManager().getRecetas())
+        rviRecipes.adapter = RecipeListAdapter(ACTIVITY.recetasManager.getRecetas())
 
         val btnAgregar = view.findViewById<Button>(R.id.btnAgregar)
         btnAgregar.setOnClickListener{ _ : View ->
