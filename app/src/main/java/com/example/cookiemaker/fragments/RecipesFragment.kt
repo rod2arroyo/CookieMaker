@@ -1,5 +1,6 @@
 package com.example.cookiemaker.fragments
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +13,18 @@ import com.example.cookiemaker.adapter.RecipeListAdapter
 import pe.edu.ulima.pm.ulgamestore.model.RecetasManager
 
 class RecipesFragment: Fragment() {
+
+    interface OnMenuClicked{
+        fun OnClick(menuName: String)
+    }
+
+    private var listener: OnMenuClicked? = null
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+
+        listener = context as OnMenuClicked
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -28,7 +41,7 @@ class RecipesFragment: Fragment() {
 
         val btnAgregar = view.findViewById<Button>(R.id.btnAgregar)
         btnAgregar.setOnClickListener{ _ : View ->
-
+            listener?.OnClick("createRecipe")
         }
     }
 }
