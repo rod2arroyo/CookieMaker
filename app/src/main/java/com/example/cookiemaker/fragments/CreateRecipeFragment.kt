@@ -42,8 +42,8 @@ class CreateRecipeFragment: Fragment() {
         btnGuardar.setOnClickListener{ _ : View ->
             listener?.OnClickCrear("recipes")
 
+            val receta = Receta(1,"Test Save",ACTIVITY.username.toString())
 
-            val receta = Receta(1,"Test Save","USER")
             ACTIVITY.recetasManager.addReceta(receta)
         }
 

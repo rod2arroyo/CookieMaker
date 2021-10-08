@@ -11,7 +11,10 @@ import pe.edu.ulima.pm.ulgamestore.model.RecetasManager
 
 class MainActivity : AppCompatActivity() , RecipesFragment.OnMenuClicked, CreateRecipeFragment.crearReceta{
     private val fragments = mutableListOf<Fragment>()
+
     val recetasManager = RecetasManager()
+    var username = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -20,12 +23,11 @@ class MainActivity : AppCompatActivity() , RecipesFragment.OnMenuClicked, Create
         fragments.add(CreateRecipeFragment())
         fragments.add(IngredientFragment())
 
-        val username = intent.getBundleExtra("data")?.getString("username")
+        username = intent.getBundleExtra("data")?.getString("username").toString()
 
         val ft = supportFragmentManager.beginTransaction()
         ft.add(R.id.flaContent,fragments[0])
         ft.commit()
-
     }
 
     fun changeRecipesFragment(){
