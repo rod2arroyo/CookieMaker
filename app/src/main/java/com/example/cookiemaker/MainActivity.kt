@@ -20,7 +20,6 @@ class MainActivity : AppCompatActivity() , RecipesFragment.OnMenuClicked, Create
         fragments.add(IngredientFragment())
 
         val username = intent.getBundleExtra("data")?.getString("username")
-        findViewById<TextView>(R.id.txtUser).text = username
 
         val ft = supportFragmentManager.beginTransaction()
         ft.add(R.id.flaContent,fragments[0])
