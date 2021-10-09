@@ -66,7 +66,6 @@ class MainActivity : AppCompatActivity() , RecipesFragment.OnMenuClicked, Create
         val fragment = fragments[2]
         val ft = supportFragmentManager.beginTransaction()
         ft.replace(R.id.flaContent,fragment)
-        ft.addToBackStack(null)
         ft.commit()
     }
 
