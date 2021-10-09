@@ -41,7 +41,7 @@ class RecetasManager {
         return null
     }
 
-    fun getIngredientes() : List<Ingrediente> {
+    fun getIngredientes() : ArrayList<Ingrediente> {
         return mIngredientes
     }
 
