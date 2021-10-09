@@ -37,7 +37,14 @@ class RecetasManager {
     }
 
     fun getReceta(id : Int) : Receta? {
-        // Debe implementarlo !!!
+        for (i in 0..(mRecetas.size-1)){
+            if(mRecetas[i].id==id){
+                return mRecetas[i]
+            }
+            else{
+                return null
+            }
+        }
         return null
     }
 

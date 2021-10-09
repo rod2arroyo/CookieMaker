@@ -39,9 +39,11 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Ingresa tu nombre"
+
         android:inputType="textPersonName"
         android:textAlignment="center"
         android:textColor="#FAFAFA"
+        android:textColorHint="#AEF6F0F0"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

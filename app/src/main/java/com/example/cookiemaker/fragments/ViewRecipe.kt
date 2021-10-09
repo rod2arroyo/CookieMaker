@@ -36,9 +36,9 @@ class ViewRecipe : Fragment() {
 
 
         val recycleringredients = view.findViewById<RecyclerView>(R.id.recetaseleccionada)
-                                                 //recycleringredients.adapter = ingredientsAdapter(ACTIVITY.recetasManager.getIngredientes())
-        recycleringredients.adapter = viewrecipecookieAdapter(recetasManagerop.getIngredientes())
-        //recycleringredients.adapter = recetaingredientesAdapter(recetasManagerop.getIngredientes())
+
+        recycleringredients.adapter = viewrecipecookieAdapter(listaselecciongalleta)
+
     }
 
 }

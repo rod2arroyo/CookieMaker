@@ -3,20 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/kiiee">
 
 
     <TextView
         android:id="@+id/editTextTextPersonName2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
         android:text="Nueva Receta"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toTopOf="@+id/nombrereceta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="40dp" />
+        android:textColor="#30130F"/>
 
     <EditText
         android:id="@+id/nombrereceta"
@@ -34,15 +36,14 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
+        android:layout_width="397dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
         app:flow_horizontalAlign="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombrereceta"
-        android:layout_width="397dp"
-        android:layout_height="66dp"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="169dp">
+        app:layout_constraintTop_toBottomOf="@+id/nombrereceta">
 
         <Button
             android:id="@+id/btnGuardar"
@@ -50,7 +51,10 @@
             android:layout_height="50dp"
             android:layout_marginHorizontal="10dp"
             android:layout_weight="1"
-            android:text="Guardar" />
+            android:text="Guardar"
+            android:background="#30130F"
+            android:backgroundTint="#30130F"
+            android:textColor="#CFA868"/>
 
         <Button
             android:id="@+id/btnIngredientes"
@@ -58,7 +62,10 @@
             android:layout_height="50dp"
             android:layout_marginHorizontal="10dp"
             android:layout_weight="1"
-            android:text="Ingredientes" />
+            android:text="Ingredientes"
+            android:background="#30130F"
+            android:backgroundTint="#30130F"
+            android:textColor="#CFA868"/>
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView

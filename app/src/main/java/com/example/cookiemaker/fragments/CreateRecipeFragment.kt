@@ -72,8 +72,9 @@ class CreateRecipeFragment: Fragment() {
             }
             println("lustaantes del boton tamaño-->>>" + listanueva.size)
 
-
+            textnombre.text=""
             //ACTIVITY.recetasManager.addReceta(receta)
+
             recetasManagerop.addReceta(receta)
             listener?.OnClickCrear("recipes")
         }

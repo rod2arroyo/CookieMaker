@@ -22,6 +22,8 @@ var idgalleta : Int = 0
 var nombregalleta : String = ""
 var listaselecciongalleta : List<Ingrediente> = arrayListOf()
 //var mano: ArrayList<Ingrediente>
+
+
 class MainActivity : AppCompatActivity() , RecipesFragment.OnMenuClicked, CreateRecipeFragment.crearReceta{
     private val fragments = mutableListOf<Fragment>()
 
