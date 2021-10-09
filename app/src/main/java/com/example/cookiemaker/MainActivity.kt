@@ -23,7 +23,12 @@ var nombregalleta : String = ""
 var listaselecciongalleta : List<Ingrediente> = arrayListOf()
 //var mano: ArrayList<Ingrediente>
 
+/* INTEGRANTES
 
+20180138 RODRIGO ARROYO
+20181177 ELDRICK MENDOZA
+
+ */
 class MainActivity : AppCompatActivity() , RecipesFragment.OnMenuClicked, CreateRecipeFragment.crearReceta{
     private val fragments = mutableListOf<Fragment>()
 
